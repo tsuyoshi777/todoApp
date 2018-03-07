@@ -10,6 +10,7 @@
 		9983CC4BD00719188D017717 /* Pods_TodoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10553CA10BA377291A2803A9 /* Pods_TodoAppTests.framework */; };
 		9D99D5B261941BC9549D41BC /* Pods_TodoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D03AAEB7102D3E2467715C /* Pods_TodoApp.framework */; };
 		B0168CC501263467C66780AE /* Pods_TodoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B51253DB9EAD3B65DEF042 /* Pods_TodoAppUITests.framework */; };
+		B11F79862050375000F42FB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B11F79852050375000F42FB7 /* GoogleService-Info.plist */; };
 		B17F3E0420501B3000D79A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17F3E0320501B3000D79A6F /* AppDelegate.swift */; };
 		B17F3E0620501B3000D79A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17F3E0520501B3000D79A6F /* ViewController.swift */; };
 		B17F3E0920501B3000D79A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17F3E0720501B3000D79A6F /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		4081D48E87848E24AFC206DC /* Pods-TodoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoAppUITests/Pods-TodoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46D03AAEB7102D3E2467715C /* Pods_TodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E8F4717F304224CBD74227 /* Pods-TodoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoAppUITests/Pods-TodoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B11F79852050375000F42FB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B17F3E0020501B3000D79A6F /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17F3E0320501B3000D79A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B17F3E0520501B3000D79A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				B17F3E0A20501B3000D79A6F /* Assets.xcassets */,
 				B17F3E0C20501B3000D79A6F /* LaunchScreen.storyboard */,
 				B17F3E0F20501B3000D79A6F /* Info.plist */,
+				B11F79852050375000F42FB7 /* GoogleService-Info.plist */,
 				B18BC2972050216E003AEC15 /* Todo.swift */,
 			);
 			path = TodoApp;
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17F3E0E20501B3000D79A6F /* LaunchScreen.storyboard in Resources */,
+				B11F79862050375000F42FB7 /* GoogleService-Info.plist in Resources */,
 				B17F3E0B20501B3000D79A6F /* Assets.xcassets in Resources */,
 				B17F3E0920501B3000D79A6F /* Main.storyboard in Resources */,
 			);

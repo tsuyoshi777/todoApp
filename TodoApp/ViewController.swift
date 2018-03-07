@@ -52,7 +52,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func createTodo(_ todo: Todo) {
         let ref = Database.database().reference()
-        let id = self.todo.count
         let todoRef = ref.child("TodoItems").childByAutoId()
         let newTodo = ["title": todo.title,"isDone": todo.isDone] as [String : Any]
         todoRef.updateChildValues(newTodo)

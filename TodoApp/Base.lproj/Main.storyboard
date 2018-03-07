@@ -77,13 +77,34 @@
                     <view key="view" contentMode="scaleToFill" id="D3p-v5-flu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XR5-gm-NEl">
+                                <rect key="frame" x="46" y="127" width="283" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx3-rH-9cn">
+                                <rect key="frame" x="135" y="187" width="104" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Task"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qpp-Nj-AcE" firstAttribute="trailing" secondItem="XR5-gm-NEl" secondAttribute="trailing" constant="46" id="2ea-Vh-VnO"/>
+                            <constraint firstItem="XR5-gm-NEl" firstAttribute="leading" secondItem="qpp-Nj-AcE" secondAttribute="leading" constant="46" id="R4x-Tn-nEM"/>
+                            <constraint firstItem="Gx3-rH-9cn" firstAttribute="top" secondItem="XR5-gm-NEl" secondAttribute="bottom" constant="30" id="alL-YO-WcS"/>
+                            <constraint firstItem="Gx3-rH-9cn" firstAttribute="leading" secondItem="qpp-Nj-AcE" secondAttribute="leading" constant="135" id="dBV-Lt-fyD"/>
+                            <constraint firstItem="qpp-Nj-AcE" firstAttribute="trailing" secondItem="Gx3-rH-9cn" secondAttribute="trailing" constant="136" id="eYE-qt-1jt"/>
+                            <constraint firstItem="XR5-gm-NEl" firstAttribute="top" secondItem="qpp-Nj-AcE" secondAttribute="top" constant="63" id="zf7-8u-mkK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qpp-Nj-AcE"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULN-7Y-C4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="142"/>
+            <point key="canvasLocation" x="1181.5999999999999" y="141.67916041979012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WZS-P9-jE5">

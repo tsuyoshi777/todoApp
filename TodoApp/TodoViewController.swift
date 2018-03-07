@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var todo = [Todo]()

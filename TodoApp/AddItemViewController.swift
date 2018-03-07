@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddItemViewController: ViewController {
+class AddItemViewController: TodoViewController {
     
     @IBOutlet weak var textField: UITextField!
     

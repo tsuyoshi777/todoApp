@@ -28,9 +28,6 @@ class AddItemViewController: TodoViewController {
         if task.isEmpty {
             
         } else {
-//            var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-//            appDelegate.checkUpdate = true
-//            appDelegate.newTask = task
             viewModel.checkUpdate = true
             viewModel.newTask = task
             self.navigationController?.popToRootViewController(animated: true)

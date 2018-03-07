@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let viewModel: TodoViewModel = TodoViewModel.sharedModel
     var todo = [Todo]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,29 +20,28 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if appDelegate.isFistBoost {
+        
+        if viewModel.isFistBoost {
             readTodo()
-            appDelegate.isFistBoost = false
+            viewModel.isFistBoost = false
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if appDelegate.checkUpdate {
+        if viewModel.checkUpdate {
             
             let todo = Todo()
-            let todoTitle = appDelegate.newTask
+            let todoTitle = viewModel.newTask
             todo.title = todoTitle
             todo.isDone = false
             self.todo.insert(todo, at: 0)
             createTodo(todo)
             
             self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
-            appDelegate.checkUpdate = false
+            viewModel.checkUpdate = false
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

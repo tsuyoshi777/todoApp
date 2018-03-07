@@ -88,6 +88,9 @@
                                 <rect key="frame" x="135" y="187" width="104" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Task"/>
+                                <connections>
+                                    <action selector="AddButtonTapped:" destination="fYD-C6-bPh" eventType="touchUpInside" id="z9w-ib-ppu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,6 +104,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qpp-Nj-AcE"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="XR5-gm-NEl" id="DCG-iD-WjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULN-7Y-C4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

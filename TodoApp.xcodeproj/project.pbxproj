@@ -17,6 +17,7 @@
 		B17F3E0E20501B3000D79A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17F3E0C20501B3000D79A6F /* LaunchScreen.storyboard */; };
 		B17F3E1920501B3000D79A6F /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17F3E1820501B3000D79A6F /* TodoAppTests.swift */; };
 		B17F3E2420501B3000D79A6F /* TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17F3E2320501B3000D79A6F /* TodoAppUITests.swift */; };
+		B18BC2982050216E003AEC15 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18BC2972050216E003AEC15 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B17F3E1F20501B3000D79A6F /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17F3E2320501B3000D79A6F /* TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITests.swift; sourceTree = "<group>"; };
 		B17F3E2520501B3000D79A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B18BC2972050216E003AEC15 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		DBADD71FFB91E03D261B5856 /* Pods-TodoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoApp/Pods-TodoApp.release.xcconfig"; sourceTree = "<group>"; };
 		E7B51253DB9EAD3B65DEF042 /* Pods_TodoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				B17F3E0A20501B3000D79A6F /* Assets.xcassets */,
 				B17F3E0C20501B3000D79A6F /* LaunchScreen.storyboard */,
 				B17F3E0F20501B3000D79A6F /* Info.plist */,
+				B18BC2972050216E003AEC15 /* Todo.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17F3E0620501B3000D79A6F /* ViewController.swift in Sources */,
+				B18BC2982050216E003AEC15 /* Todo.swift in Sources */,
 				B17F3E0420501B3000D79A6F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

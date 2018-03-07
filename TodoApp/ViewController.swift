@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var todo = [Todo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

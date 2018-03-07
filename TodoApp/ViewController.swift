@@ -53,6 +53,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         todoRef.updateChildValues(newTodo)
     }
     
+    func updateTodo(_ location: Int) {
+        let ref = Database.database().reference()
+        var i = 1
+        ref.child("TodoItems").observeSingleEvent(of: .value, with: { (snapshot) in
+            for item in snapshot.children {
+                let child = item as! DataSnapshot
+                let uniqueId = child.key
+                let dic = child.value as! NSDictionary
+                if i == location {
+                    let title = dic["title"] as! String
+                    let isDone = dic["isDone"] as! Bool
+                    let updateItems = ["TodoItems/\(uniqueId)":["title": title, "isDone": !isDone]]
+                    ref.updateChildValues(updateItems)
+                }
+                i += 1
+            }
+        })
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todo.count
     }
@@ -69,6 +88,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let myTodo = todo[indexPath.row]
+        
+        if myTodo.isDone {
+            myTodo.isDone = false
+        } else {
+            myTodo.isDone = true
+        }
+        
+        tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        let location = self.todo.count - indexPath.row
+        updateTodo(location)
     }
 }
 

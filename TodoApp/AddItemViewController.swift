@@ -34,8 +34,4 @@ class AddItemViewController: ViewController {
             self.navigationController?.popToRootViewController(animated: true)
         }
     }
-    
-    
-   
-
 }

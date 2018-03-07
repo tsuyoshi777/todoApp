@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -30,6 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             todo.title = todoTitle
             todo.isDone = false
             self.todo.insert(todo, at: 0)
+            createTodo(todo)
             
             self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
             appDelegate.checkUpdate = false
@@ -41,6 +43,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createTodo(_ todo: Todo) {
+        let ref = Database.database().reference()
+        let id = self.todo.count
+        let todoRef = ref.child("TodoItems").childByAutoId()
+        let newTodo = ["title": todo.title,"isDone": todo.isDone] as [String : Any]
+        todoRef.updateChildValues(newTodo)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -24,6 +24,15 @@ class AddItemViewController: ViewController {
     }
     
     @IBAction func AddButtonTapped(_ sender: Any) {
+        guard let task = textField.text else { return }
+        if task.isEmpty {
+            
+        } else {
+            var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.checkUpdate = true
+            appDelegate.newTask = task
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     

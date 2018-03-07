@@ -11,6 +11,9 @@ import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var checkUpdate:Bool = false
+    var newTask:String = ""
 
     var window: UIWindow?
 

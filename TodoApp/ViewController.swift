@@ -18,6 +18,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appDelegate.checkUpdate {
+            
+            let todo = Todo()
+            let todoTitle = appDelegate.newTask
+            todo.title = todoTitle
+            todo.isDone = false
+            self.todo.insert(todo, at: 0)
+            
+            self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
+            appDelegate.checkUpdate = false
+        }
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

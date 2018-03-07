@@ -13,7 +13,9 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var checkUpdate:Bool = false
+    var isFistBoost:Bool = true
     var newTask:String = ""
+    var todo = [Todo]()
 
     var window: UIWindow?
 

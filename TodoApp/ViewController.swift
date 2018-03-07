@@ -11,19 +11,24 @@ import FirebaseDatabase
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var todo = [Todo]()
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if appDelegate.isFistBoost {
+            readTodo()
+            appDelegate.isFistBoost = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         if appDelegate.checkUpdate {
             
             let todo = Todo()
@@ -51,6 +56,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let todoRef = ref.child("TodoItems").childByAutoId()
         let newTodo = ["title": todo.title,"isDone": todo.isDone] as [String : Any]
         todoRef.updateChildValues(newTodo)
+    }
+    
+    func readTodo() {
+        let ref = Database.database().reference()
+        ref.child("TodoItems").observeSingleEvent(of: .value, with: { (snapshot) in
+            for item in snapshot.children {
+                let child = item as! DataSnapshot
+                let dic = child.value as! NSDictionary
+                let todo = Todo()
+                todo.title = dic["title"] as! String
+                todo.isDone = dic["isDone"] as! Bool
+                self.todo.insert(todo, at: 0)
+                
+            }
+            self.tableView.reloadData()
+        })
     }
     
     func updateTodo(_ location: Int) {

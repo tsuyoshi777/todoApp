@@ -145,16 +145,13 @@
 		B17F3E0220501B3000D79A6F /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				B17F3E0320501B3000D79A6F /* AppDelegate.swift */,
-				B17F3E0720501B3000D79A6F /* Main.storyboard */,
-				B17F3E0520501B3000D79A6F /* TodoViewController.swift */,
-				B18BC29920502358003AEC15 /* AddItemViewController.swift */,
-				B1CB17842050908300BF622B /* TodoViewModel.swift */,
-				B17F3E0A20501B3000D79A6F /* Assets.xcassets */,
-				B17F3E0C20501B3000D79A6F /* LaunchScreen.storyboard */,
+				B1C0DD012050A029008AC265 /* App */,
+				B1C0DCFE20509E95008AC265 /* Models */,
+				B1C0DCFF20509EA9008AC265 /* View */,
 				B17F3E0F20501B3000D79A6F /* Info.plist */,
 				B11F79852050375000F42FB7 /* GoogleService-Info.plist */,
-				B18BC2972050216E003AEC15 /* Todo.swift */,
+				B1C0DD0020509EBB008AC265 /* Resource */,
+				B17F3E0A20501B3000D79A6F /* Assets.xcassets */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -175,6 +172,41 @@
 				B17F3E2520501B3000D79A6F /* Info.plist */,
 			);
 			path = TodoAppUITests;
+			sourceTree = "<group>";
+		};
+		B1C0DCFE20509E95008AC265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B18BC2972050216E003AEC15 /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B1C0DCFF20509EA9008AC265 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B17F3E0720501B3000D79A6F /* Main.storyboard */,
+				B17F3E0520501B3000D79A6F /* TodoViewController.swift */,
+				B18BC29920502358003AEC15 /* AddItemViewController.swift */,
+				B1CB17842050908300BF622B /* TodoViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1C0DD0020509EBB008AC265 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B17F3E0C20501B3000D79A6F /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B1C0DD012050A029008AC265 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B17F3E0320501B3000D79A6F /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -20,7 +20,9 @@ class TodoViewModel: NSObject {
     func createTodo(_ todo: Todo) {
         let ref = Database.database().reference()
         let todoRef = ref.child("TodoItems").childByAutoId()
-        let newTodo = ["title": todo.title,"isDone": todo.isDone] as [String : Any]
+        
+        guard let title = todo.title else { return }
+        let newTodo = ["title": title,"isDone": todo.isDone] as [String : Any]
         todoRef.updateChildValues(newTodo)
     }
     

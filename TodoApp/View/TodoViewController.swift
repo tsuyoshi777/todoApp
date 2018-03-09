@@ -55,7 +55,7 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 let child = item as! DataSnapshot
                 let dic = child.value as! NSDictionary
                 let todo = Todo()
-                todo.title = dic["title"] as! String
+                todo.title = dic["title"] as? String
                 todo.isDone = dic["isDone"] as! Bool
                 self.viewModel.todo.insert(todo, at: 0)
                 
